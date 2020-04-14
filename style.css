@@ -1,0 +1,101 @@
+a {
+  text-decoration: none;
+}
+
+.container{
+  font-family: 'Open Sans', sans-serif;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.newsletter-box {
+  /* class is less specific than id (#) */
+  /* the latter/ the more specific rule wins */
+  border: solid thin #cfcfcf;
+  border-radius: 3px;
+  padding: 10px;
+  color: grey;
+  position: relative;
+}
+
+.newsletter-box h3 {
+  margin-top: 0px;
+  /* <h3 style="color:red">Newsletter</h3> */
+}
+
+#email {
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding: 3px;
+  box-sizing: border-box;
+  /*content-box = size + padding + border*/
+  border: solid thin #cfcfcf;
+  border-radius: 3px; /*edges rounded*/
+}
+
+button {
+  display: block;
+  width: 100%;
+  background: #3cb878;
+  border: none;
+  color: white;
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#terms {
+  position: relative;
+  top: 2px;
+  left: 0px;
+}
+
+.closex {
+  position: absolute; /* moves from natural flow */
+  top: 0px;
+  right: 6px;
+  cursor: pointer;
+}
+
+#questioncircle {
+  font-size: 70px;
+  color: white;
+  background: #3cb878;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  text-align: center;
+  
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.card {
+  color: white;
+  background: #3cb878;
+  /*background: url('hhtp...'); na pozadi bude obrazok*/
+  width: 180px; /*inak sa prisposobi w. obrazku*/
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 5px 3px grey;
+  /*flex-grow: 1; - narastie do sirky*/
+}
+
+.card-holder {
+  display: flex;
+  justify-content: space-between;
+  /*space-around - medzera aj na krajoch*/
+  align-items: center;
+  /*align-items: flex-start; flex-end; center; stretch - zafixuje pri roznych velkostiach bud vrchnu cast, spodnu alebo na stred; stretch je default natiahne vsetky rovnako*/
+  flex-direction: row;
+  /*flex-direction: row; column - zoradi do stlpca; row-reverse - zoradi naopak*/
+  flex-wrap: wrap 
+  /*ked nie je miesto za sebou, zoradi do dalsieho riadku*/
+  align-content: flex-start;
+  /* google flex box for tricks; align-content: flex-start; flex-end; center*/
+}
